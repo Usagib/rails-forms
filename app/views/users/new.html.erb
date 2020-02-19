@@ -3,3 +3,14 @@
 <%= render 'form', user: @user %>
 
 <%= link_to 'Back', users_path %>
+
+<form action="/users" method="post">
+  <label for="username"> Username: </label>
+  <input id="username" type="text" name="user[username]" value="">
+  <label for="email"> Email: </label>
+  <input id="email" type="text" name="user[email]" value="">
+  <label for="password">Password:</label>
+  <input id="password" type="text" name="user[password]" value="">
+  <br>
+  <input id ="submit" type="submit" name="" value="signup">
+</form>
