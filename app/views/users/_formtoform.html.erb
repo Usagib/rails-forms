@@ -1,0 +1,16 @@
+
+<%= form_tag("/users", method:"post") do %>
+
+  <%= label_tag(:username, "Username") %>
+  <%= text_field_tag(@user.username) %>
+
+  <%= label_tag(:email, "Email") %>
+  <%= email_field_tag(@user.email) %>
+  
+  <%= label_tag(:password, "Password") %>
+  <%= password_field_tag(@user.password) %>
+  <br>
+
+<%= submit_tag("Sign up") %>
+
+<% end %>
