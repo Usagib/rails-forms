@@ -1,9 +1,9 @@
 <%= form_for @user do |for_form| %>
   <%= for_form.label :username, 'Username' %>
-  <%= for_form.text_field :username %>
+  <%= for_form.text_field :username, placeholder: "Enter your username", value: "FooUser" %>
   <%= for_form.label :password, 'Password' %>
-  <%= for_form.password_field :password %>
-  <%= for_form.label :email, 'Email' %>
-  <%= for_form.email_field :email %>
+  <%= for_form.password_field :password, placeholder: "choose a Password", value: "foopasswrod"  %>
+  <%= for_form.label :email,'Email' %>
+  <%= for_form.email_field :email, placeholder: "enter your Email address", value: "bar@bar.com" %>
   <%= for_form.submit 'Signup' %>
 <% end %>
