@@ -1,0 +1,41 @@
+AllCops:
+  Exclude:
+    - "bin/*"
+    - "db/**/*"
+    - "config/**/*"
+    - "Guardfile"
+    - "Rakefile"
+    - "node_modules/**/*"
+    - "Gemfile"
+    - "Gemfile.lock"
+    - "test/**/*"
+  DisplayCopNames: true
+
+Metrics/MethodLength:
+  Include: ["app/controllers/*"]
+  Max: 20
+Metrics/AbcSize:
+  Include: ["app/controllers/*"]
+  Max: 30
+Metrics/ClassLength:
+  Max: 60
+Metrics/BlockLength:
+  Max: 50
+  ExcludedMethods: ["describe"]
+
+Style/Documentation:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
+# Style/HashEachMethods:
+#  Enabled: true
+# Style/HashTransformKeys:
+#  Enabled: true
+# Style/HashTransformValues:
+#  Enabled: true
+
+Layout/ExtraSpacing:
+  AllowForAlignment: false
+Layout/MultilineMethodCallIndentation:
+  Enabled: true
+  EnforcedStyle: indented
